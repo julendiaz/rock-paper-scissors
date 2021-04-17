@@ -8,9 +8,9 @@ Regarding the purpose of the exercise, I went for using the already designed UI 
 
 ## Goals of the Project
 
-- [ ] Make the game Rock Paper Scissors work
-- [ ] Implement the "Think like a Programmer" system
-- [ ] Come up with at least two different solutions for the problem
+- [x] Make the game Rock Paper Scissors work
+- [x] Implement the "Think like a Programmer" system
+- [x] Come up with at least two different solutions for the problem
 - [ ] Implement the UI from Front-End Mentor
 - [ ] Have fun
 
@@ -28,6 +28,8 @@ Regarding the purpose of the exercise, I went for using the already designed UI 
 - **How could we store the rules of the game in javascript?**
 
 ### Pseudocode
+
+This is the initial pseudocode I came up with at first. Although it was a good starting point, I had to re-arrange things a bit in order to work it out. In the implementation section I will show you the final result.
 
 ```
 // Starter Values
@@ -51,8 +53,9 @@ Store the computerSelection with the computer random func
 Console.log the result of the game
 ```
 
-### Research
+### Useful Sources
 
 - [Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 - [Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 - [Math.random()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
+- [Terniary Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
