@@ -29,12 +29,12 @@ Regarding the purpose of the exercise, I went for using the already designed UI 
 
 ### Pseudocode
 
-```javascript
+```
 // Starter Values
 Store the values Rock, Paper and Scissors in an array
 Store playerScore into a variable, start at zero
 Store computerScore into a variable, start at zero
-//Make the computer play
+// Make the computer play
 Create computerPlay func that returns a random Rock Paper and Scissors
 // Build the game
 Create a game func to play 5 rounds of the game and report a winner
@@ -53,5 +53,5 @@ Console.log the result of the game
 
 ### Research
 
-[Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
-[Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- [Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+- [Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
