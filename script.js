@@ -37,7 +37,7 @@ let playRound = function(playerSelection, computerSelection) {
 let playGame = function() {
     for (let i = 0; i < 5; i++) {
         // Get the input for both players
-        const playerSelection = prompt(); 
+        // const playerSelection = prompt(); 
         const computerSelection = computerPlay();
         playRound(playerSelection, computerSelection);
     }
@@ -47,7 +47,6 @@ let playGame = function() {
     console.log("It looks like is a Tie!"); 
 }
 
-console.log(playGame());
 
 
 

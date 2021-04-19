@@ -6,7 +6,7 @@ In this project, we are going to build from scratch the implementation for the O
 
 Regarding the purpose of the exercise, I went for using the already designed UI from Front-End Mentor Challenge so I could focus on trying to come up with a clean solution in the javascript file.
 
-## Goals of the Project
+## The Challenge
 
 - [x] Make the game Rock Paper Scissors work
 - [x] Implement the "Think like a Programmer" system
@@ -53,9 +53,16 @@ Store the computerSelection with the computer random func
 Console.log the result of the game
 ```
 
+### Mobile-First
+
+For this project, I wanted to try implementing a common approach regarding responsive Web Design. And that is going for a mobile-first design and development. If you are not familiarized with this term, it is just a way of prioritizing mobile user content over desktop devices.
+
+It is the first time I'm going to try it out, so I hope everything is fine. I'll keep you updated.
+
 ### Useful Sources
 
 - [Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 - [Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 - [Math.random()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
 - [Terniary Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [Mobile-first](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first)
