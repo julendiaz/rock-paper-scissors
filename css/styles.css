@@ -1,0 +1,9 @@
+/* Variables for colors and Typography */
+
+:root {
+  --back-gradient: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+body {
+  background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
