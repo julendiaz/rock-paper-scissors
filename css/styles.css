@@ -1,9 +1,111 @@
 /* Variables for colors and Typography */
 
 :root {
-  --back-gradient: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  --white-font: rgb(241, 241, 241);
+  --back-gradient: hsl(214, 52%, 19%);
+  --main-font: "Barlow Semi Condensed", sans-serif;
+  --blue-font: hsl(214, 43%, 44%);
+  --num-scores: rgb(90, 90, 90);
 }
 
 body {
   background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  font-family: var(--main-font);
+}
+
+/* Header Styles */
+
+#scores-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.6em auto;
+  width: 19em;
+  height: 6em;
+  border: solid 0.2em rgba(179, 200, 238, 0.575);
+  border-radius: 0.5em;
+}
+
+#scores-container h1 {
+  color: var(--white-font);
+  font-size: 1.4em;
+  margin-left: 0.7em;
+}
+
+#house-score-container {
+  margin-right: 0.8em;
+  margin-left: -1.3em;
+}
+
+.scores {
+  background-color: var(--white-font);
+  width: 4.4em;
+  height: 4.4em;
+  margin-top: 0.75em;
+  border-radius: 0.3em;
+  text-align: center;
+}
+
+.scores h4 {
+  margin-top: 0.9em;
+  color: var(--blue-font);
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.scores p {
+  color: var(--num-scores);
+  font-size: 2.3em;
+  font-weight: 700;
+  margin-top: -0.38em;
+}
+
+/* Main Styles */
+
+#play-container {
+  width: 22em;
+  height: 22em;
+  margin: 5em auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 2em;
+}
+
+.weapon {
+  width: 10em;
+  height: 10em;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+}
+
+#btn-rock {
+  background-color: var(--blue-font);
+}
+
+#btn-paper {
+  background-color: rgb(218, 218, 93);
+}
+
+#btn-scissors {
+  margin-top: -4em;
+  background-color: rgb(179, 74, 74);
+}
+
+/* Footer */
+
+.btn {
+  background-color: transparent;
+  border: 0.1em solid var(--white-font);
+  color: var(--white-font);
+  width: 8em;
+  height: 2.8em;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-family: var(--main-font);
+  margin: 0 auto;
+  display: block;
 }

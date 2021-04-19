@@ -66,3 +66,5 @@ It is the first time I'm going to try it out, so I hope everything is fine. I'll
 - [Math.random()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
 - [Terniary Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 - [Mobile-first](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first)
+- [How to get rid of blurry edges](https://jsfiddle.net/Will_law/Lo0n9g2y/)
+- [Using em's instead of px](https://stackoverflow.com/questions/609517/why-em-instead-of-px)

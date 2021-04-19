@@ -10,8 +10,37 @@
     <link rel="stylesheet" href="css/reset.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div id="scores-container">
+            <h1>ROCK<br>PAPER<br>SCISSORS</h1>
+            <div class="scores" id="human-score-container">
+                <h4>USER</h4>
+                <p id="human-score">12</p>
+            </div>
+            <div class="scores" id="house-score-container">
+                <h4>HOUSE</h4>
+                <p id="human-score">22</p>
+            </div>
+        </div>
+    </header>
+    <!-- Main -->
+    <main>
+        <div id="play-container">
+            <button class="weapon" id="btn-rock"></button>
+            <button class="weapon" id="btn-paper"></button>
+            <button class="weapon" id="btn-scissors"></button>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <button class="btn" id="btn-rules">RULES</button>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
