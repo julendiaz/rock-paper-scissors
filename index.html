@@ -32,21 +32,28 @@
     <!-- Main -->
     <main>
         <div class="flex" id="play-container">
-            <button class="weapon" id="btn-rock"></button>
-            <button class="weapon" id="btn-paper"></button>
-            <button class="weapon" id="btn-scissors"></button>
+            <button class="weapon" id="btn-rock">
+                <img src="images/rock-icon.png" alt="Rock icon" id="rock-img">
+            </button>
+            <button class="weapon" id="btn-paper">
+                <img src="images/paper-icon.png" alt="Paper Icon" id="paper-img">
+            </button>
+            <button class="weapon" id="btn-scissors">
+                <img src="images/scissors-icon.png" alt="Scissors Icon" id="scissors-img">
+            </button>
         </div>
         <div class="flex hide" id="round-container">
             <button class="weapon" id="pick-user"></button>
             <button class="weapon" id="pick-house"></button>
-            <p class="p-choices">YOU PICKED</p>
-            <p class="p-choices">THE HOUSE PICKED</p>
+            <h5 class="p-choices">YOU PICKED</h5>
+            <h5 class="p-choices">THE HOUSE PICKED</h5>
         </div>
     </main>
     <!-- Footer -->
     <footer>
         <button class="btn" id="btn-rules">RULES</button>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

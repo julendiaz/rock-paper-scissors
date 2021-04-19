@@ -65,31 +65,28 @@ body {
 #play-container {
   width: 22em;
   height: 22em;
-  margin: 5em auto 0 auto;
+  margin: 3em auto 3em auto;
   flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 2em;
 }
 
 .weapon {
-  width: 10em;
-  height: 10em;
+  width: 12em;
+  height: 12em;
   cursor: pointer;
   border-radius: 50%;
   border: none;
+  background-color: transparent;
 }
 
-#btn-rock {
-  background-color: var(--blue-font);
-}
-
-#btn-paper {
-  background-color: rgb(218, 218, 93);
+.weapon img {
+  width: 100%;
+  border-radius: 50%;
 }
 
 #btn-scissors {
   margin-top: -4em;
-  background-color: rgb(179, 74, 74);
 }
 
 /* playRound */
@@ -105,22 +102,29 @@ body {
 #round-container {
   width: 22em;
   height: 22em;
-  margin: 5em auto 0 auto;
+  margin: 3em auto 3em auto;
   flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 2em;
 }
 
-#round-container p {
+#round-container .p-choices {
   width: 10em;
   height: 2em;
-  margin-top: -7.2em;
+  margin-top: 0em;
   text-align: center;
   font-family: var(--main-font);
   color: var(--white-font);
   font-weight: 700;
   letter-spacing: 0.1em;
   font-size: 0.8em;
+}
+
+#round-container p {
+  color: var(--white-font);
+  font-size: 3.3em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
 /* Footer */

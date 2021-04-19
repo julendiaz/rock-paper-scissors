@@ -6,7 +6,13 @@ const scissorsChoice = document.querySelector("#btn-scissors");
 const userScore = document.querySelector("#user-score");
 const houseScore = document.querySelector("#house-score");
 const initialWeapons = document.querySelector("#play-container");
-const whoPickedWhat = document.querySelector("#round-container")
+const whoPickedWhat = document.querySelector("#round-container");
+const pickUser = document.querySelector("#pick-user");
+const pickHouse = document.querySelector("#pick-house");
+const rockImg = document.querySelector("#rock-img");
+const paperImg = document.querySelector("#paper-img");
+const scissorsImg = document.querySelector("#scissors-img");
+const winnerMessage = document.createElement('p');
 // Starter values
 let weapons = ["rock", "paper", "scissors"]; 
 let playerScore = 0;
@@ -24,16 +30,21 @@ weaponChoice.forEach((button) => {
         // Get to know which weapon the user chose
         if (rockChoice.contains(e.target)) {
             playerSelection = "rock";
+            pickUser.appendChild(rockImg);
         } else if (paperChoice.contains(e.target)) {
             playerSelection = "paper";
+            pickUser.appendChild(paperImg);
         } else if (scissorsChoice.contains(e.target)) {
             playerSelection = "scissors";
+            pickUser.appendChild(scissorsImg);
         }
         showChoices();
         
         // Let's create a random adversary
         let computerPlay = function () {
-            return weapons[Math.floor(Math.random() * 3)]
+            let computerChoice = weapons[Math.floor(Math.random() * 3)];
+            pickHouse.innerHTML = `<img src="images/${computerChoice}-icon.png" alt="Computer icon">`
+            return computerChoice;
         }
 
         // Create a function for one single round
@@ -51,15 +62,21 @@ weaponChoice.forEach((button) => {
             }
             // Use the previous objects + input to determine the result of the round
             if(winnerHands[playerSelection] === computerSelection) {
-                console.log(`You win! ${playerSelection} beats ${computerSelection}`); 
+                console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+                winnerMessage.textContent = "YOU WIN!";
+                whoPickedWhat.appendChild(winnerMessage);
                 playerScore++;
                 userScore.textContent = playerScore;
             } else if (looserHands[playerSelection] === computerSelection) {
                 console.log(`You loose! ${computerSelection} beats ${playerSelection} `);
+                winnerMessage.textContent = "YOU LOOSE!";
+                whoPickedWhat.appendChild(winnerMessage);
                 computerScore++;
                 houseScore.textContent = computerScore;
             } else {
-                console.log("It's a tie")
+                console.log("It's a tie");
+                winnerMessage.textContent = "IT'S A TIE!";
+                whoPickedWhat.appendChild(winnerMessage);
             }
         }
 
