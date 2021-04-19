@@ -59,7 +59,7 @@ For this project, I wanted to try implementing a common approach regarding respo
 
 It is the first time I'm going to try it out, so I hope everything is fine. I'll keep you updated.
 
-### Useful Sources
+## Useful Sources
 
 - [Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 - [Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
@@ -68,3 +68,7 @@ It is the first time I'm going to try it out, so I hope everything is fine. I'll
 - [Mobile-first](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first)
 - [How to get rid of blurry edges](https://jsfiddle.net/Will_law/Lo0n9g2y/)
 - [Using em's instead of px](https://stackoverflow.com/questions/609517/why-em-instead-of-px)
+
+## Attribution
+
+- Rock, Paper and Scissors Illustration from veectyzy.

@@ -66,7 +66,6 @@ body {
   width: 22em;
   height: 22em;
   margin: 5em auto 0 auto;
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 2em;
@@ -91,6 +90,37 @@ body {
 #btn-scissors {
   margin-top: -4em;
   background-color: rgb(179, 74, 74);
+}
+
+/* playRound */
+
+.flex {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+#round-container {
+  width: 22em;
+  height: 22em;
+  margin: 5em auto 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 2em;
+}
+
+#round-container p {
+  width: 10em;
+  height: 2em;
+  margin-top: -7.2em;
+  text-align: center;
+  font-family: var(--main-font);
+  color: var(--white-font);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
 }
 
 /* Footer */
