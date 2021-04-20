@@ -15,15 +15,23 @@ const scissorsImg = document.querySelector("#scissors-img");
 const winnerMessage = document.createElement('p');
 const btnNextRound = document.createElement("button");
 
+// Store the rules into an object for simplification
+let winnerHands = {
+    "rock": "scissors",
+    "paper": "rock",
+    "scissors": "paper"
+}
+let looserHands = {
+    "rock": "paper",
+    "paper": "scissors",
+    "scissors": "rock"
+}
+
 // Starter values
 let weapons = ["rock", "paper", "scissors"]; 
 let playerScore = 0;
 let computerScore = 0; 
 let playerSelection;
-
-// Button next round 
-btnNextRound.setAttribute("id", "btn-next-round");
-btnNextRound.textContent = "PLAY NEXT ROUND";
 
 // Change Displays
 let showChoices = function () {
@@ -36,8 +44,18 @@ let showInitialWeapons = function () {
     whoPickedWhat.classList.add("hide");
 }
 
+// Display Message for round winner + btn Next Round
+let roundResults = function () {
+    whoPickedWhat.appendChild(winnerMessage);
+    whoPickedWhat.appendChild(btnNextRound);
+    // Create Button for Next Round 
+    btnNextRound.setAttribute("id", "btn-next-round");
+    btnNextRound.textContent = "PLAY NEXT ROUND";
+    btnNextRound.addEventListener("click", function() {
+        showInitialWeapons();
+    })
+}
 
-// Create a function for play the game 5 rounds
 let playGame = function() {
     // Let's create a random adversary
     let computerPlay = function () {
@@ -45,19 +63,9 @@ let playGame = function() {
         pickHouse.innerHTML = `<img src="images/${computerChoice}-icon.png" alt="Computer icon">`
         return computerChoice;
     }
+
     // Create a function for one single round
     let playRound = function(playerSelection, computerSelection) {
-        // Store the rules into an object for simplification
-        let winnerHands = {
-            "rock": "scissors",
-            "paper": "rock",
-            "scissors": "paper"
-        }
-        let looserHands = {
-            "rock": "paper",
-            "paper": "scissors",
-            "scissors": "rock"
-        }
 
         weaponChoice.forEach((button) => {
             button.addEventListener("click", function(e){
@@ -75,51 +83,40 @@ let playGame = function() {
                         computerSelection = computerPlay();
                         pickUser.innerHTML = `<img src="images/scissors-icon.png" alt="Rock icon">`
                 }
+
                 showChoices();
-                
-                
-                // Use the previous objects + input to determine the result of the round
+    
+                // Use the rules object + input to determine the result of the round
                 if(winnerHands[playerSelection] === computerSelection) {
                     winnerMessage.textContent = "YOU WIN!";
-                    whoPickedWhat.appendChild(winnerMessage);
-                    whoPickedWhat.appendChild(btnNextRound);
+                    roundResults();
                     playerScore++;
-                    userScore.textContent = playerScore;
-                    btnNextRound.addEventListener("click", function() {
-                        showInitialWeapons();
-                    })
-                    console.log(playerSelection, computerSelection);
+                    userScore.textContent = playerScore; 
                 } else if (looserHands[playerSelection] === computerSelection) {
                     winnerMessage.textContent = "YOU LOOSE!";
-                    whoPickedWhat.appendChild(winnerMessage);
-                    whoPickedWhat.appendChild(btnNextRound);
+                    roundResults();
                     computerScore++;
                     houseScore.textContent = computerScore;
-                    btnNextRound.addEventListener("click", function() {
-                        showInitialWeapons();
-                    })
-                    console.log(playerSelection, computerSelection);
                 } else {
                     winnerMessage.textContent = "IT'S A TIE!";
-                    whoPickedWhat.appendChild(winnerMessage); 
-                    whoPickedWhat.appendChild(btnNextRound);
-                    btnNextRound.addEventListener("click", function() {
-                        showInitialWeapons();
-                    })
-                    console.log(playerSelection, computerSelection);
+                    roundResults();  
                 }
+
+                // Check for winner 
+                if (playerScore === 5) {
+                    console.log("Player Wins!")
+                } else if (computerScore === 5) {
+                    console.log("Computer Wins!");
+                };
+
             })
         });
     }
-    // Get the input for both players
     // Listen for a user choice
     const computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
-// Check for winner 
-playerScore > computerScore ? console.log("Player Wins!") :
-playerScore < computerScore ? console.log("Computer Wins!") : 
-console.log("It looks like is a Tie!"); 
-}
+    
+};
 playGame();
 
 
