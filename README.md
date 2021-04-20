@@ -68,6 +68,17 @@ It is the first time I'm going to try it out, so I hope everything is fine. I'll
 - [Mobile-first](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first)
 - [How to get rid of blurry edges](https://jsfiddle.net/Will_law/Lo0n9g2y/)
 - [Using em's instead of px](https://stackoverflow.com/questions/609517/why-em-instead-of-px)
+- [How to disable a button](https://www.sololearn.com/Discuss/1794949/solved-is-there-a-way-to-disable-click-on-an-element-with-an-event-listener-without-removing-the)
+
+## Additional Improvements
+
+These are just a few features that I would like to work on my free time. There is always room for improvement. Sometimes it's about cleaning up the code or coming up with better solutions, or it might be about designing some cool animation. Just keep improving.
+
+- [ ] Set up a Timer for each round until Computer choses a weapon.
+- [ ] Add keybord shortcuts for playing
+- [ ] Add some kind of motion design
+- [ ] Come up with a cooler UI
+- [ ] Add a story behind the game
 
 ## Attribution
 

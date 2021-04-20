@@ -14,7 +14,9 @@ const paperImg = document.querySelector("#paper-img");
 const scissorsImg = document.querySelector("#scissors-img");
 const winnerMessage = document.createElement('p');
 const btnNextRound = document.createElement("button");
-
+const gameOver = document.querySelector("#game-over");
+const btnPlayAgain = document.querySelector("#play-again");
+const finalMsg = document.querySelector("#final-msg");
 // Store the rules into an object for simplification
 let winnerHands = {
     "rock": "scissors",
@@ -38,7 +40,6 @@ let showChoices = function () {
     initialWeapons.classList.add("hide");
     whoPickedWhat.classList.remove("hide");
 }
-
 let showInitialWeapons = function () {
     initialWeapons.classList.remove("hide");
     whoPickedWhat.classList.add("hide");
@@ -54,6 +55,22 @@ let roundResults = function () {
     btnNextRound.addEventListener("click", function() {
         showInitialWeapons();
     })
+}
+
+let playAgain = function () {
+    btnPlayAgain.addEventListener("click", function(){
+        gameOver.classList.add("hide");
+        playerScore = 0;
+        userScore.textContent = 0;
+        computerScore = 0; 
+        houseScore.textContent = 0;
+        showInitialWeapons();
+    })
+};
+// Disable buttons after picking a choice
+let disableBtns = function () {
+    pickUser.disabled = true;
+    pickHouse.disabled = true;
 }
 
 let playGame = function() {
@@ -92,23 +109,29 @@ let playGame = function() {
                     roundResults();
                     playerScore++;
                     userScore.textContent = playerScore; 
+                    disableBtns();
                 } else if (looserHands[playerSelection] === computerSelection) {
                     winnerMessage.textContent = "YOU LOOSE!";
                     roundResults();
                     computerScore++;
                     houseScore.textContent = computerScore;
+                    disableBtns();
                 } else {
                     winnerMessage.textContent = "IT'S A TIE!";
                     roundResults();  
+                    disableBtns();
                 }
 
                 // Check for winner 
                 if (playerScore === 5) {
-                    console.log("Player Wins!")
+                    finalMsg.innerHTML = "YOU<br>WIN<br>THE<br>GAME";
+                    gameOver.classList.remove("hide");
+                    playAgain();
                 } else if (computerScore === 5) {
-                    console.log("Computer Wins!");
+                    finalMsg.innerHTML = "GAME<br>OVER<br>FOR<br>YOU";
+                    gameOver.classList.remove("hide");
+                    playAgain();
                 };
-
             })
         });
     }
