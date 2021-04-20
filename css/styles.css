@@ -237,3 +237,112 @@ button:active {
   border: 0.1em solid var(--white-font);
   color: var(--white-font);
 }
+
+@media (min-width: 1000px) {
+  /* Media for Header */
+  #scores-container {
+    margin: 2.2em auto;
+    width: 40em;
+    height: 8em;
+    border: solid 0.2em rgba(179, 200, 238, 0.575);
+    border-radius: 1em;
+  }
+
+  #scores-container h1 {
+    font-size: 1.8em;
+  }
+
+  #house-score-container {
+    margin-right: 0.8em;
+    margin-left: -16.3em;
+  }
+
+  .scores {
+    width: 6.4em;
+    height: 6.4em;
+    border-radius: 0.6em;
+  }
+
+  .scores h4 {
+    margin-top: 0.9em;
+    font-size: 1em;
+  }
+
+  .scores p {
+    font-size: 3em;
+  }
+
+  /* Media for center */
+  #play-container {
+    width: 30em;
+    height: 28em;
+    padding-top: 2em;
+  }
+
+  .weapon {
+    width: 16em;
+    height: 16em;
+  }
+
+  #round-container {
+    width: 30em;
+    height: 28em;
+  }
+
+  #round-container .p-choices {
+    font-size: 1em;
+  }
+
+  #round-container p {
+    margin-top: 0em;
+    text-align: center;
+    width: 100%;
+  }
+
+  #btn-next-round {
+    margin-top: -4.3em;
+    height: 3em;
+    width: 18em;
+  }
+
+  /* Media for Footer */
+  #btn-rules {
+    position: absolute;
+    right: 3em;
+    bottom: 3em;
+    width: 10em;
+    height: 3em;
+  }
+
+  .pop-up {
+    left: 50%;
+    top: 14em;
+    margin-left: -15em;
+    border-radius: 1em;
+    width: 30em;
+    height: 27em;
+  }
+
+  .pop-up img {
+    width: 70%;
+    display: block;
+    margin: 3.3em auto;
+  }
+
+  #game-over h1 {
+    font-size: 6em;
+    margin-left: 0.33em;
+    margin-top: 0.2em;
+  }
+
+  #play-again {
+    width: 12em;
+    height: 4em;
+    border-radius: 0.6em;
+    font-size: 0.8em;
+    margin: -9.7em 2.9em 0em auto;
+    display: block;
+    cursor: pointer;
+    transition: 0.05s;
+  }
+}
