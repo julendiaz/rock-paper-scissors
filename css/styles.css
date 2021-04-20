@@ -143,3 +143,18 @@ body {
   margin: 0 auto;
   display: block;
 }
+
+#btn-next-round {
+  background-color: transparent;
+  border: 0.1em solid var(--white-font);
+  color: var(--white-font);
+  width: 14em;
+  height: 2.8em;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-family: var(--main-font);
+  margin: -2em auto 2em auto;
+  display: block;
+}
