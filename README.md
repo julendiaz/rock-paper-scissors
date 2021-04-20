@@ -11,7 +11,8 @@ Regarding the purpose of the exercise, I went for using the already designed UI 
 - [x] Make the game Rock Paper Scissors work
 - [x] Implement the "Think like a Programmer" system
 - [x] Come up with at least two different solutions for the problem
-- [ ] Implement the UI from Front-End Mentor
+- [x] Implement the UI from Front-End Mentor
+- [ ] Make it Responsive
 - [ ] Have fun
 
 ## Approach
@@ -69,6 +70,7 @@ It is the first time I'm going to try it out, so I hope everything is fine. I'll
 - [How to get rid of blurry edges](https://jsfiddle.net/Will_law/Lo0n9g2y/)
 - [Using em's instead of px](https://stackoverflow.com/questions/609517/why-em-instead-of-px)
 - [How to disable a button](https://www.sololearn.com/Discuss/1794949/solved-is-there-a-way-to-disable-click-on-an-element-with-an-event-listener-without-removing-the)
+- [How to center an element with absulte position](https://thoughtbot.com/blog/positioning);
 
 ## Additional Improvements
 

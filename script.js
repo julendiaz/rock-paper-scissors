@@ -17,6 +17,9 @@ const btnNextRound = document.createElement("button");
 const gameOver = document.querySelector("#game-over");
 const btnPlayAgain = document.querySelector("#play-again");
 const finalMsg = document.querySelector("#final-msg");
+const btnRules = document.querySelector("#btn-rules");
+const showRules = document.querySelector("#show-rules");
+
 // Store the rules into an object for simplification
 let winnerHands = {
     "rock": "scissors",
@@ -45,7 +48,7 @@ let showInitialWeapons = function () {
     whoPickedWhat.classList.add("hide");
 }
 
-// Display Message for round winner + btn Next Round
+// Display Message for round winner + btn for Next Round
 let roundResults = function () {
     whoPickedWhat.appendChild(winnerMessage);
     whoPickedWhat.appendChild(btnNextRound);
@@ -56,6 +59,14 @@ let roundResults = function () {
         showInitialWeapons();
     })
 }
+// Display or not the Rules of the Game
+document.addEventListener("click", function(e) {
+    if (btnRules.contains(e.target)) {
+        showRules.classList.toggle("hide");
+    } else if (!showRules.classList.contains("hide") && !showRules.contains(e.target)) {
+        showRules.classList.add("hide");
+    } 
+})
 
 let playAgain = function () {
     btnPlayAgain.addEventListener("click", function(){
@@ -80,7 +91,6 @@ let playGame = function() {
         pickHouse.innerHTML = `<img src="images/${computerChoice}-icon.png" alt="Computer icon">`
         return computerChoice;
     }
-
     // Create a function for one single round
     let playRound = function(playerSelection, computerSelection) {
 
@@ -100,9 +110,7 @@ let playGame = function() {
                         computerSelection = computerPlay();
                         pickUser.innerHTML = `<img src="images/scissors-icon.png" alt="Rock icon">`
                 }
-
                 showChoices();
-    
                 // Use the rules object + input to determine the result of the round
                 if(winnerHands[playerSelection] === computerSelection) {
                     winnerMessage.textContent = "YOU WIN!";
@@ -121,7 +129,6 @@ let playGame = function() {
                     roundResults();  
                     disableBtns();
                 }
-
                 // Check for winner 
                 if (playerScore === 5) {
                     finalMsg.innerHTML = "YOU<br>WIN<br>THE<br>GAME";

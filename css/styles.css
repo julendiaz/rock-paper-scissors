@@ -71,6 +71,10 @@ body {
   padding-top: 2em;
 }
 
+button:active {
+  outline: none;
+}
+
 .weapon {
   width: 12em;
   height: 12em;
@@ -83,6 +87,10 @@ body {
 .weapon img {
   width: 100%;
   border-radius: 50%;
+}
+
+.weapon img:hover {
+  transform: scale(1.03);
 }
 
 #btn-scissors {
@@ -143,6 +151,20 @@ body {
   margin: 0 auto;
   display: block;
   cursor: pointer;
+  transition: 0.05s;
+}
+
+.btn:hover {
+  background-color: var(--white-font);
+  color: var(--blue-font);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  outline: none;
 }
 
 #btn-next-round {
@@ -159,18 +181,31 @@ body {
   margin: -2em auto 2em auto;
   display: block;
   cursor: pointer;
+  transition: 0.05s;
+}
+
+#btn-next-round:hover {
+  background-color: var(--white-font);
+  color: var(--blue-font);
 }
 
 /* Game-over Display */
 
-#game-over {
+.pop-up {
   position: absolute;
   top: 13.5em;
-  left: 9%;
+  left: 50%;
+  margin-left: -9.8em;
   background-color: var(--white-font);
   border-radius: 0.5em;
-  width: 82%;
+  width: 19.3em;
   height: 23em;
+}
+
+.pop-up img {
+  width: 90%;
+  display: block;
+  margin: 3.3em auto;
 }
 
 #game-over h1 {
@@ -181,9 +216,9 @@ body {
 }
 
 #play-again {
-  background-color: var(--back-gradient);
-  border: 0.1em solid var(--white-font);
-  color: var(--white-font);
+  border: 0.2em solid var(--back-gradient);
+  color: var(--back-gradient);
+  background-color: transparent;
   width: 21em;
   height: 4em;
   border-radius: 0.5em;
@@ -194,4 +229,11 @@ body {
   margin: -1.5em auto 0em auto;
   display: block;
   cursor: pointer;
+  transition: 0.05s;
+}
+
+#play-again:hover {
+  background-color: var(--back-gradient);
+  border: 0.1em solid var(--white-font);
+  color: var(--white-font);
 }
