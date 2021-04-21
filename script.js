@@ -84,69 +84,70 @@ let disableBtns = function () {
     pickHouse.disabled = true;
 }
 
-let playGame = function() {
-    // Let's create a random adversary
-    let computerPlay = function () {
-        let computerChoice = weapons[Math.floor(Math.random() * 3)];
-        pickHouse.innerHTML = `<img src="images/${computerChoice}-icon.png" alt="Computer icon">`
-        return computerChoice;
-    };
-    // Create a function for one single round
-    let playRound = function(playerSelection, computerSelection) {
-        
-        weaponChoice.forEach((button) => {
-            button.addEventListener("click", function(e){
-                // Get to know which weapon the user chose
-                if (rockChoice.contains(e.target)) {
-                        playerSelection = "rock";
-                        computerSelection = computerPlay();
-                        pickUser.innerHTML = `<img src="images/rock-icon.png" alt="Rock icon">`
-                } else if (paperChoice.contains(e.target)) {
-                        playerSelection = "paper";
-                        computerSelection = computerPlay();
-                        pickUser.innerHTML = `<img src="images/paper-icon.png" alt="Rock icon">`
-                } else if (scissorsChoice.contains(e.target)) {
-                        playerSelection = "scissors";
-                        computerSelection = computerPlay();
-                        pickUser.innerHTML = `<img src="images/scissors-icon.png" alt="Rock icon">`
-                }
-                showChoices();
-                // Use the rules object + input to determine the result of the round
-                if(winnerHands[playerSelection] === computerSelection) {
-                    winnerMessage.textContent = "YOU WIN!";
-                    roundResults();
-                    playerScore++;
-                    userScore.textContent = playerScore; 
-                    disableBtns();
-                } else if (looserHands[playerSelection] === computerSelection) {
-                    winnerMessage.textContent = "YOU LOOSE!";
-                    roundResults();
-                    computerScore++;
-                    houseScore.textContent = computerScore;
-                    disableBtns();
-                } else {
-                    winnerMessage.textContent = "IT'S A TIE!";
-                    roundResults();  
-                    disableBtns();
-                }
-                // Check for winner 
-                if (playerScore === 5) {
-                    finalMsg.innerHTML = "YOU<br>WIN<br>THE<br>GAME";
-                    gameOver.classList.remove("hide");
-                    playAgain();
-                } else if (computerScore === 5) {
-                    finalMsg.innerHTML = "GAME<br>OVER<br>FOR<br>YOU";
-                    gameOver.classList.remove("hide");
-                    playAgain();
-                };
-            })
-        });
-    }
+// Let's create a random adversary
+let computerPlay = function () {
+    let computerChoice = weapons[Math.floor(Math.random() * 3)];
+    pickHouse.innerHTML = `<img src="images/${computerChoice}-icon.png" alt="Computer icon">`
+    return computerChoice;
+};
+
+// Create a function for one single round
+let playRound = function(playerSelection, computerSelection) {
+    weaponChoice.forEach((button) => {
+        button.addEventListener("click", function(e){
+            // Get to know which weapon the user chose
+            if (rockChoice.contains(e.target)) {
+                    playerSelection = "rock";
+                    computerSelection = computerPlay();
+                    pickUser.innerHTML = `<img src="images/rock-icon.png" alt="Rock icon">`
+            } else if (paperChoice.contains(e.target)) {
+                    playerSelection = "paper";
+                    computerSelection = computerPlay();
+                    pickUser.innerHTML = `<img src="images/paper-icon.png" alt="Rock icon">`
+            } else if (scissorsChoice.contains(e.target)) {
+                    playerSelection = "scissors";
+                    computerSelection = computerPlay();
+                    pickUser.innerHTML = `<img src="images/scissors-icon.png" alt="Rock icon">`
+            }
+            showChoices();
+            // Use the rules object + input to determine the result of the round
+            if(winnerHands[playerSelection] === computerSelection) {
+                winnerMessage.textContent = "YOU WIN!";
+                roundResults();
+                playerScore++;
+                userScore.textContent = playerScore; 
+                disableBtns();
+            } else if (looserHands[playerSelection] === computerSelection) {
+                winnerMessage.textContent = "YOU LOOSE!";
+                roundResults();
+                computerScore++;
+                houseScore.textContent = computerScore;
+                disableBtns();
+            } else {
+                winnerMessage.textContent = "IT'S A TIE!";
+                roundResults();  
+                disableBtns();
+            }
+            // Check for winner 
+            if (playerScore === 5) {
+                finalMsg.innerHTML = "YOU<br>WIN<br>THE<br>GAME";
+                gameOver.classList.remove("hide");
+                playAgain();
+            } else if (computerScore === 5) {
+                finalMsg.innerHTML = "GAME<br>OVER<br>FOR<br>YOU";
+                gameOver.classList.remove("hide");
+                playAgain();
+            };
+        })
+    });
+};
+
+let playGame = function () {
     // Listen for a user choice
     const computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
-    
-};
+}
+
 playGame();
 
 
