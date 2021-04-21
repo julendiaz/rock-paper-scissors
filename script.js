@@ -86,9 +86,7 @@ let disableBtns = function () {
 
 // Let's create a random adversary
 let computerPlay = function () {
-    let computerChoice = weapons[Math.floor(Math.random() * 3)];
-    pickHouse.innerHTML = `<img src="images/${computerChoice}-icon.png" alt="Computer icon">`
-    return computerChoice;
+    return weapons[Math.floor(Math.random() * 3)];
 };
 
 // Create a function for one single round
@@ -98,34 +96,48 @@ let playRound = function(playerSelection, computerSelection) {
             // Get to know which weapon the user chose
             if (rockChoice.contains(e.target)) {
                     playerSelection = "rock";
-                    computerSelection = computerPlay();
+                    pickHouse.innerHTML = "";
                     pickUser.innerHTML = `<img src="images/rock-icon.png" alt="Rock icon">`
+                    whoPickedWhat.classList.add("hide");
             } else if (paperChoice.contains(e.target)) {
                     playerSelection = "paper";
-                    computerSelection = computerPlay();
+                    pickHouse.innerHTML = "";
                     pickUser.innerHTML = `<img src="images/paper-icon.png" alt="Rock icon">`
+                    whoPickedWhat.classList.add("hide");
             } else if (scissorsChoice.contains(e.target)) {
                     playerSelection = "scissors";
-                    computerSelection = computerPlay();
+                    pickHouse.innerHTML = "";
                     pickUser.innerHTML = `<img src="images/scissors-icon.png" alt="Rock icon">`
+                    whoPickedWhat.classList.add("hide");
             }
             showChoices();
+            computerSelection = computerPlay();
+            // Set timeout here
+            setTimeout(function() {
+                pickHouse.innerHTML = `<img src="images/${computerSelection}-icon.png" alt="Computer icon">`;
+            }, 2000);
             // Use the rules object + input to determine the result of the round
             if(winnerHands[playerSelection] === computerSelection) {
-                winnerMessage.textContent = "YOU WIN!";
-                roundResults();
-                playerScore++;
-                userScore.textContent = playerScore; 
+                setTimeout(function() {
+                    winnerMessage.textContent = "YOU WIN!";
+                    roundResults();
+                    playerScore++;
+                    userScore.textContent = playerScore; 
+                }, 2000);
                 disableBtns();
             } else if (looserHands[playerSelection] === computerSelection) {
-                winnerMessage.textContent = "YOU LOOSE!";
-                roundResults();
-                computerScore++;
-                houseScore.textContent = computerScore;
+                setTimeout(function() {
+                    winnerMessage.textContent = "YOU LOOSE!";
+                    roundResults();
+                    computerScore++;
+                    houseScore.textContent = computerScore;
+                }, 2000)
                 disableBtns();
             } else {
-                winnerMessage.textContent = "IT'S A TIE!";
-                roundResults();  
+                setTimeout(function() {
+                    winnerMessage.textContent = "IT'S A TIE!";
+                    roundResults(); 
+                }, 2000); 
                 disableBtns();
             }
             // Check for winner 
@@ -144,8 +156,8 @@ let playRound = function(playerSelection, computerSelection) {
 
 let playGame = function () {
     // Listen for a user choice
-    const computerSelection = computerPlay();
-    playRound(playerSelection, computerSelection);
+    const computerSelection =computerPlay();
+    playRound(playerSelection, setTimeout(computerSelection, 3000));
 }
 
 playGame();
