@@ -90,10 +90,10 @@ let playGame = function() {
         let computerChoice = weapons[Math.floor(Math.random() * 3)];
         pickHouse.innerHTML = `<img src="images/${computerChoice}-icon.png" alt="Computer icon">`
         return computerChoice;
-    }
+    };
     // Create a function for one single round
     let playRound = function(playerSelection, computerSelection) {
-
+        
         weaponChoice.forEach((button) => {
             button.addEventListener("click", function(e){
                 // Get to know which weapon the user chose
