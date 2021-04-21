@@ -2,6 +2,8 @@
 
 ![Frame 1portadagithub](https://user-images.githubusercontent.com/66780327/115557714-475ba980-a2b2-11eb-870c-5dd59aa5517f.png)
 
+Go to the [Live Preview](https://shifujulen.github.io/rock-paper-scissors/);
+
 ## Brief Introduction
 
 In this project, we are going to build from scratch the implementation for the Old-School game Rock Paper Scissors. This is a really nice and introductory way of applying the widespread system of thinking as a programmer.
