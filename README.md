@@ -4,7 +4,24 @@
 
 Go to the [Live Preview](https://shifujulen.github.io/rock-paper-scissors/);
 
-## Brief Introduction
+## Table of contents
+
+- [Overview](#overview)
+- [The challenge](#the-challenge)
+- [Screenshots](#screenshots)
+- [My process](#my-process)
+  - [Understand the problem](#understand-the-problem)
+  - [Pseudocode](#pseudocode)
+  - [Mobile-first](#mobile-first)
+  - [Game Rules](#game-rules)
+  - [DOM Manipulation](#dom-manipulation)
+  - [Disabling buttons](#disabling-buttons)
+- [Useful sources](#useful-sources)
+- [Additional Improvements](#additional-improvements)
+- [Attribution](#attribution)
+- [Contact](#contact)
+
+## Overview
 
 In this project, we are going to build from scratch the implementation for the Old-School game Rock Paper Scissors. This is a really nice and introductory way of applying the widespread system of thinking as a programmer.
 
@@ -31,7 +48,7 @@ I really enjoyed and learned a lot while doing this one. Not only I developed ev
 ![Mobile2](/screenshots/mobile2.PNG);
 ![Mobilegameover](/screenshots/mobile-gameover.PNG);
 
-## Approach
+## My Process
 
 > Thinking like a Programmer is about having fun with problem-solving
 
@@ -169,3 +186,8 @@ These are just a few features that I would like to work on my free time. There i
 - Developed by Julen Diaz
 
 ## Contact
+
+[<img alt="Instagram" src="https://img.shields.io/badge/julen.dev%20-%23E4405F.svg?&style=for-the-badge&logo=Instagram&logoColor=white"/>](https://www.instagram.com/julen.dev/)
+[<img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/julenfront/)
+[<img alt="Youtube" src="https://img.shields.io/badge/julendev%20-%23FF0000.svg?&style=for-the-badge&logo=YouTube&logoColor=white"/>](https://www.youtube.com/channel/UCUoloquxVnnNLFTD8RwthIQ)
+[<img alt="Twitter" src="https://img.shields.io/badge/@julendev%20-%231DA1F2.svg?&style=for-the-badge&logo=Twitter&logoColor=white"/>](https://twitter.com/julendev)
