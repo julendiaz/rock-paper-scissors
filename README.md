@@ -1,10 +1,14 @@
-# Rock Paper Scissors Game - The Odin Project
+# Rock Paper Scissors - TOP + Front-End Mentor
+
+![Frame 1portadagithub](https://user-images.githubusercontent.com/66780327/115557714-475ba980-a2b2-11eb-870c-5dd59aa5517f.png)
 
 ## Brief Introduction
 
 In this project, we are going to build from scratch the implementation for the Old-School game Rock Paper Scissors. This is a really nice and introductory way of applying the widespread system of thinking as a programmer.
 
-Regarding the purpose of the exercise, I went for using the already designed UI from Front-End Mentor Challenge so I could focus on trying to come up with a clean solution in the javascript file.
+Regarding the purpose of the exercise, I went for using the already designed UI from [Front-End Mentor](https://www.frontendmentor.io/) Challenge so I could focus on trying to come up with a clean solution in the javascript file. At least just until I come up with a cooler UI.
+
+I really enjoyed and learned a lot while doing this one. Not only I developed everything from a Mobile-first approach but I almost wrote all the javascript code by myself. It's not a perfect solution, but for now it works.
 
 ## The Challenge
 
@@ -12,8 +16,18 @@ Regarding the purpose of the exercise, I went for using the already designed UI 
 - [x] Implement the "Think like a Programmer" system
 - [x] Come up with at least two different solutions for the problem
 - [x] Implement the UI from Front-End Mentor
-- [ ] Make it Responsive
-- [ ] Have fun
+- [x] Make it Responsive
+- [x] Have fun
+
+## Screenshots
+
+![Desktop1](/screenshots/desktop1.PNG);
+![Desktop2](/screenshots/desktop2.PNG);
+![Desktoprules](/screenshots/rules.PNG);
+![Desktopwin](/screenshots/winthegame.PNG);
+![Mobile1](/screenshots/mobile1.PNG);
+![Mobile2](/screenshots/mobile2.PNG);
+![Mobilegameover](/screenshots/mobile-gameover.PNG);
 
 ## Approach
 
@@ -58,7 +72,72 @@ Console.log the result of the game
 
 For this project, I wanted to try implementing a common approach regarding responsive Web Design. And that is going for a mobile-first design and development. If you are not familiarized with this term, it is just a way of prioritizing mobile user content over desktop devices.
 
-It is the first time I'm going to try it out, so I hope everything is fine. I'll keep you updated.
+Surprisingly, it was much easier to go from mobile default sizes into desktop mode. So from now on, I might always start developing every app with a mobile-first technique.
+
+For implementing the media queries, I worked first with a Responsive Mobile design of 375px x 700px aprox, and then add the change at 1000px. Just because the mobile design seem to work even in tablet intermediate size.
+
+```css
+@media (min-width: 1000px) {
+  /* Media for Header */
+  #scores-container {
+    margin: 2.2em auto;
+    width: 40em;
+    height: 8em;
+    border: solid 0.2em rgba(179, 200, 238, 0.575);
+    border-radius: 1em;
+  }
+```
+
+### Game Rules
+
+Regarding the javascript development for making the game work, I wanted to come up with a solution which played with some other tools like javascript objects. That's why I thought of storing the winner hands and the loser hands in two objects, so afterwards I could identify which player had the winner or loser hand.
+
+```javascript
+let winnerHands = {
+  rock: "scissors",
+  paper: "rock",
+  scissors: "paper",
+};
+let looserHands = {
+  rock: "paper",
+  paper: "scissors",
+  scissors: "rock",
+};
+
+if (winnerHands[playerSelection] === computerSelection) {
+  winnerMessage.textContent = "YOU WIN!";
+  playerScore++;
+} else if (looserHands[playerSelection] === computerSelection) {
+  winnerMessage.textContent = "YOU LOOSE!";
+  computerScore++;
+} else {
+  winnerMessage.textContent = "IT'S A TIE!";
+}
+```
+
+### DOM Manipulation
+
+Because of the previous lecture in The Odin Project curriculum, I wanted to see if I could apply the few different methods of manipulating elements with the DOM. That's why for example, in the random computer choice for each weapon, I used the innerHTML feature for inserting the img element with a template literal. I'm starting to see template literals as something really useful.
+
+```javascript
+let computerPlay = function () {
+  let computerChoice = weapons[Math.floor(Math.random() * 3)];
+  pickHouse.innerHTML = `<img src="images/${computerChoice}-icon.png" alt="Computer icon">`;
+  return computerChoice;
+};
+```
+
+### Disabling Buttons
+
+One of the hardest bugs I had while building this project was the one when I clicked one of the weapons after each round. Everything went completely nuts. At the end, I just needed to re-arrange things a bit in the file and disable the buttons after each round. This is the simple method I used.
+
+```javascript
+// Disable buttons after picking a choice
+let disableBtns = function () {
+  pickUser.disabled = true;
+  pickHouse.disabled = true;
+};
+```
 
 ## Useful Sources
 
@@ -79,9 +158,12 @@ These are just a few features that I would like to work on my free time. There i
 - [ ] Set up a Timer for each round until Computer choses a weapon.
 - [ ] Add keybord shortcuts for playing
 - [ ] Add some kind of motion design
-- [ ] Come up with a cooler UI
+- [ ] Come up with a cooler UI: Elements: Fire - Plants - Water
 - [ ] Add a story behind the game
 
 ## Attribution
 
-- Rock, Paper and Scissors Illustration from veectyzy.
+- UI from Front-End Mentor.
+- Developed by Julen Diaz
+
+## Contact
