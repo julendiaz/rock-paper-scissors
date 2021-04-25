@@ -7,5 +7,5 @@
 - [x] Select picked-container in dom
 - [x] Change the previous round-container elements
 - [x] Toggle the class of hide in the round results and timer-feature
-- [ ] Style css for desktop with media queries
+- [x] Style css for desktop with media queries
 - [ ] Add a simple animation to the button before displaying computer choice

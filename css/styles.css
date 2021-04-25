@@ -75,6 +75,18 @@ button:active {
   outline: none;
 }
 
+@keyframes pulse {
+  0 % {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.08);
+  }
+  100 % {
+    transform: scale(1);
+  }
+}
+
 .weapon {
   width: 12em;
   height: 12em;
@@ -204,7 +216,11 @@ button:active {
   top: 13.5em;
   left: 50%;
   margin-left: -9.8em;
-  background-color: var(--white-font);
+  background-image: linear-gradient(
+    rgba(241, 241, 241, 0.3),
+    rgba(241, 241, 241, 1),
+    rgba(241, 241, 241, 1)
+  );
   border-radius: 0.5em;
   width: 19.3em;
   height: 23em;
@@ -295,6 +311,10 @@ button:active {
   #round-container {
     width: 30em;
     height: 28em;
+  }
+
+  #picked-container {
+    width: 30em;
   }
 
   #round-container .p-choices {

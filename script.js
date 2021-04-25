@@ -118,6 +118,7 @@ let playRound = function (playerSelection, computerSelection) {
     button.addEventListener("click", function (e) {
       winnerMessage.setAttribute("class", "hide");
       btnNextRound.setAttribute("class", "hide");
+      pickUser.style.animation = "pulse 0.63s 3";
       // Get to know which weapon the user chose
       if (rockChoice.contains(e.target)) {
         playerSelection = "rock";
