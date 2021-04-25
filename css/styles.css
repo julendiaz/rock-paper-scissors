@@ -116,7 +116,14 @@ button:active {
   padding-top: 2em;
 }
 
-#round-container .p-choices {
+#picked-container {
+  width: 22em;
+  height: 14em;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#picked-container .p-choices {
   width: 10em;
   height: 2em;
   margin-top: 0em;
@@ -133,6 +140,7 @@ button:active {
   font-size: 3.3em;
   font-weight: 700;
   letter-spacing: 0.05em;
+  margin-top: 0.3em;
 }
 
 /* Footer */
@@ -178,7 +186,7 @@ button:active {
   font-weight: 600;
   letter-spacing: 0.1em;
   font-family: var(--main-font);
-  margin: -2em auto 2em auto;
+  margin: -5em auto 2em auto;
   display: block;
   cursor: pointer;
   transition: 0.05s;

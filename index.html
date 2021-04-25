@@ -1,69 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
 
     <!-- Reset CSS -->
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css" />
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <!-- Typography -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <div id="scores-container">
-            <h1>ROCK<br>PAPER<br>SCISSORS</h1>
-            <div class="scores" id="human-score-container">
-                <h4>USER</h4>
-                <p id="user-score">0</p>
-            </div>
-            <div class="scores" id="house-score-container">
-                <h4>HOUSE</h4>
-                <p id="house-score">0</p>
-            </div>
+      <div id="scores-container">
+        <h1>ROCK<br />PAPER<br />SCISSORS</h1>
+        <div class="scores" id="human-score-container">
+          <h4>USER</h4>
+          <p id="user-score">0</p>
         </div>
+        <div class="scores" id="house-score-container">
+          <h4>HOUSE</h4>
+          <p id="house-score">0</p>
+        </div>
+      </div>
     </header>
     <!-- Main -->
     <main>
-        <div class="flex" id="play-container">
-            <button class="weapon" id="btn-rock">
-                <img src="images/rock-icon.png" alt="Rock icon" id="rock-img">
-            </button>
-            <button class="weapon" id="btn-paper">
-                <img src="images/paper-icon.png" alt="Paper Icon" id="paper-img">
-            </button>
-            <button class="weapon" id="btn-scissors">
-                <img src="images/scissors-icon.png" alt="Scissors Icon" id="scissors-img">
-            </button>
+      <div class="flex" id="play-container">
+        <button class="weapon" id="btn-rock">
+          <img src="images/rock-icon.png" alt="Rock icon" id="rock-img" />
+        </button>
+        <button class="weapon" id="btn-paper">
+          <img src="images/paper-icon.png" alt="Paper Icon" id="paper-img" />
+        </button>
+        <button class="weapon" id="btn-scissors">
+          <img
+            src="images/scissors-icon.png"
+            alt="Scissors Icon"
+            id="scissors-img"
+          />
+        </button>
+      </div>
+      <div class="flex hide" id="round-container">
+        <button class="weapon" id="pick-user"></button>
+        <button class="weapon" id="pick-house"></button>
+        <div id="picked-container" class="flex hide">
+          <h5 class="p-choices">YOU PICKED</h5>
+          <h5 class="p-choices">THE HOUSE PICKED</h5>
         </div>
-        <div class="flex hide" id="round-container">
-            <button class="weapon" id="pick-user"></button>
-            <button class="weapon" id="pick-house"></button>
-            <h5 class="p-choices">YOU PICKED</h5>
-            <h5 class="p-choices">THE HOUSE PICKED</h5>
-        </div>
-        <div class="pop-up hide" id="game-over">
-            <h1 id="final-msg"></h1>
-            <button id="play-again">PLAY AGAIN</button>
-        </div>
-        <div class="pop-up hide" id="show-rules">
-            <img src="images/rules-img.png" alt="Rules for the game" id="rules-img">
-        </div>
+      </div>
+      <div class="pop-up hide" id="game-over">
+        <h1 id="final-msg"></h1>
+        <button id="play-again">PLAY AGAIN</button>
+      </div>
+      <div class="pop-up hide" id="show-rules">
+        <img
+          src="images/rules-img.png"
+          alt="Rules for the game"
+          id="rules-img"
+        />
+      </div>
     </main>
     <!-- Footer -->
     <footer>
-        <button class="btn" id="btn-rules">RULES</button>
+      <button class="btn" id="btn-rules">RULES</button>
     </footer>
 
-    <!-- Branching is Awesome -->
-    <div class="timer-feature"></div>
-    
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
