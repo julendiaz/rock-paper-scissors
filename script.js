@@ -38,13 +38,13 @@ let playerScore = 0;
 let computerScore = 0;
 let playerSelection;
 
+// Disable Hover
+weaponChoice.forEach((w) => w.classList.add("hover-btn"));
 // Change Displays
 let showChoices = function () {
   initialWeapons.classList.add("hide");
   whoPickedWhat.classList.remove("hide");
-  setTimeout(function () {
-    pickedContainer.classList.remove("hide");
-  }, 2000);
+  pickedContainer.classList.remove("hide");
 };
 let showInitialWeapons = function () {
   initialWeapons.classList.remove("hide");
@@ -54,6 +54,7 @@ let showInitialWeapons = function () {
 
 // Display Message for round winner + btn for Next Round
 let roundResults = function () {
+  weaponChoice.forEach((w) => w.classList.add("hover-btn"));
   checkforWinner();
   pickedContainer.appendChild(winnerMessage);
   pickedContainer.appendChild(btnNextRound);
@@ -118,7 +119,6 @@ let playRound = function (playerSelection, computerSelection) {
     button.addEventListener("click", function (e) {
       winnerMessage.setAttribute("class", "hide");
       btnNextRound.setAttribute("class", "hide");
-      pickUser.style.animation = "pulse 0.63s 3";
       // Get to know which weapon the user chose
       if (rockChoice.contains(e.target)) {
         playerSelection = "rock";
@@ -135,32 +135,24 @@ let playRound = function (playerSelection, computerSelection) {
       }
       showChoices();
       computerSelection = computerPlay();
-      // Set timeout here
-      setTimeout(function () {
-        pickHouse.innerHTML = `<img src="images/${computerSelection}-icon.png" alt="Computer icon">`;
-      }, 2000);
+      pickHouse.innerHTML = `<img src="images/${computerSelection}-icon.png" alt="Computer icon">`;
+      pickUser.classList.remove("hover-btn");
       // Use the rules object + input to determine the result of the round
       if (winnerHands[playerSelection] === computerSelection) {
-        setTimeout(function () {
-          winnerMessage.textContent = "YOU WIN!";
-          playerScore++;
-          userScore.textContent = playerScore;
-          roundResults();
-        }, 2000);
+        winnerMessage.textContent = "YOU WIN!";
+        playerScore++;
+        userScore.textContent = playerScore;
+        roundResults();
         disableBtns();
       } else if (looserHands[playerSelection] === computerSelection) {
-        setTimeout(function () {
-          winnerMessage.textContent = "YOU LOOSE!";
-          computerScore++;
-          houseScore.textContent = computerScore;
-          roundResults();
-        }, 2000);
+        winnerMessage.textContent = "YOU LOOSE!";
+        computerScore++;
+        houseScore.textContent = computerScore;
+        roundResults();
         disableBtns();
       } else {
-        setTimeout(function () {
-          winnerMessage.textContent = "IT'S A TIE!";
-          roundResults();
-        }, 2000);
+        winnerMessage.textContent = "IT'S A TIE!";
+        roundResults();
         disableBtns();
       }
     });

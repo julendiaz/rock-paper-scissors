@@ -174,7 +174,7 @@ let disableBtns = function () {
 
 These are just a few features that I would like to work on my free time. There is always room for improvement. Sometimes it's about cleaning up the code or coming up with better solutions, or it might be about designing some cool animation. Just keep improving.
 
-- [ ] Set up a Timer for each round until Computer choses a weapon.
+- [x] Set up a Timer for each round until Computer choses a weapon.
 - [ ] Add keybord shortcuts for playing
 - [ ] Add some kind of motion design
 - [ ] Come up with a cooler UI: Elements: Fire - Plants - Water

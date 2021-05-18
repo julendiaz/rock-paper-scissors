@@ -8,4 +8,9 @@
 - [x] Change the previous round-container elements
 - [x] Toggle the class of hide in the round results and timer-feature
 - [x] Style css for desktop with media queries
-- [ ] Add a simple animation to the button before displaying computer choice
+- [x] Add a simple animation to the button before displaying computer choice
+
+## Additional Improvements
+
+- [x] Remove timer feature for simplification
+- [x] Remove opacity gradient on rules and game over
