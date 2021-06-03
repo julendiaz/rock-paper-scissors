@@ -2,7 +2,7 @@
 
 ![Frame 1portadagithub](https://user-images.githubusercontent.com/66780327/115557714-475ba980-a2b2-11eb-870c-5dd59aa5517f.png)
 
-Go to the [Live Preview](https://shifujulen.github.io/rock-paper-scissors/);
+Go to the [Live Preview](https://julendiaz.github.io/rock-paper-scissors/);
 
 ## Table of contents
 
